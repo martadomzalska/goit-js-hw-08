@@ -20,13 +20,10 @@ if (json !== null) {
   message.value = reload.message;
 };
 
-function removeStorageKey() {
-  localStorage.removeItem(storageKey);
-}
 form.addEventListener('submit', (event) => {
   console.log(localStorage.getItem(storageKey));
   event.preventDefault();
   form.reset();
-  removeStorageKey();
+  localStorage.removeItem(storageKey);
 });
   
